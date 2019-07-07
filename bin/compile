@@ -89,7 +89,12 @@ message "-----> Chmod dart at $CHMOD_DART"
 DART_BIN=`ls -l /app/dart-sdk/bin/dart`
 message "-----> Dart cmd found at $DART_BIN"
 
-CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
+cd /app/dart-sdk/bin
+
+DART_BIN=`ls -l `
+message "-----> Dart cmd found at $DART_BIN"
+
+CAN_DART_RUN=`./dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
 
 cd $BUILD_DIR
